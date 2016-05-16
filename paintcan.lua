@@ -11,9 +11,6 @@ v = changing or unknown variable
 "next, var" is the same as "pairs(var)" but faster
 ]]
 
-print(" ")
-print(" ")
-print(" ")
 --localization--
 local fInsert = table.insert
 local fRemove = table.remove
@@ -216,10 +213,6 @@ local function fUnMTF(tData)
 	
 	
 	--decode--
-	print(tMTFTable[1])
-	print(tMTFTable[2])
-	print(tMTFTable[3])
-	print(tMTFTable[4])
 	for _,iNum in next,tData do
 		fInsert(tMTFTable,1,fRemove(tMTFTable,iNum)) --move bit to front
 		fInsert(tSolution,tMTFTable[1]) --record bit
@@ -382,9 +375,6 @@ local function fHuffman(tData)
 		fRemove(tTree,1)
 	end
 	tKey = fSetBits(tTree[1])
-	file = fs.open("debug","w")
-	file.write(textutils.serialize(tKey))
-	file.close()
 	
 	
 	--encode--
